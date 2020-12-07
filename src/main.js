@@ -6,8 +6,18 @@ export default class App {
     }
     return suma;
   }
+  sumatoriaSerieDos(numero) {
+    let suma = 1;
+    let i = 2;
+    while (i <= numero) {
+      suma = suma + 1 / i;
+      i++;
+    }
+    return suma;
+  }
 }
 
 let app = new App();
 
 console.log(app.sumatoriaSerieUno(3));
+console.log(app.sumatoriaSerieDos(3));
