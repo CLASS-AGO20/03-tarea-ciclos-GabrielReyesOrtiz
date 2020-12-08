@@ -20,9 +20,28 @@ export default class App {
     }
     return suma;
   }
+
+  esPrimo(numero) {
+    let suma = 0;
+    let i = 1;
+    do {
+      if (numero % i == 0) {
+        suma++;
+        i++;
+      } else {
+        i++;
+      }
+    } while (i <= numero);
+    if (suma == 2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 let app = new App();
 
 console.log(app.sumatoriaSerieUno(3));
 console.log(app.sumatoriaSerieDos(3));
+console.log(app.esPrimo(3));
