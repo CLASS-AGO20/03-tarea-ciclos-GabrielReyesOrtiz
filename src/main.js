@@ -38,6 +38,19 @@ export default class App {
       return false;
     }
   }
+  obtenerMultiplos(inicio, fin) {
+    let cadena = "";
+
+    do {
+      if (inicio % 3 == 0) {
+        cadena = cadena + inicio;
+        inicio++;
+      } else {
+        inicio++;
+      }
+    } while (inicio <= fin);
+    return cadena;
+  }
 }
 
 let app = new App();
@@ -45,3 +58,4 @@ let app = new App();
 console.log(app.sumatoriaSerieUno(3));
 console.log(app.sumatoriaSerieDos(3));
 console.log(app.esPrimo(3));
+console.log(app.obtenerMultiplos(10, 25));
