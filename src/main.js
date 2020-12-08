@@ -51,6 +51,25 @@ export default class App {
     } while (inicio <= fin);
     return cadena;
   }
+  obtenerImpares(numero1, numero2) {
+    let cadena = "";
+
+    if (numero1 > numero2) {
+      let t = numero1;
+      numero1 = numero2;
+      numero2 = t;
+    }
+
+    for (let i = numero2; i >= numero1; i--) {
+      if (numero2 % 2 != 0) {
+        cadena = cadena + "," + numero2;
+        numero2--;
+      } else {
+        numero2--;
+      }
+    }
+    return cadena;
+  }
 }
 
 let app = new App();
@@ -59,3 +78,4 @@ console.log(app.sumatoriaSerieUno(3));
 console.log(app.sumatoriaSerieDos(3));
 console.log(app.esPrimo(3));
 console.log(app.obtenerMultiplos(10, 25));
+console.log(app.obtenerImpares(5, 10));
