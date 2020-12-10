@@ -62,8 +62,13 @@ export default class App {
 
     for (let i = numero2; i >= numero1; i--) {
       if (numero2 % 2 != 0) {
-        cadena = cadena + "," + numero2;
-        numero2--;
+        if (cadena == "") {
+          cadena = cadena + numero2;
+          numero2--;
+        } else {
+          cadena = cadena + "," + numero2;
+          numero2--;
+        }
       } else {
         numero2--;
       }
